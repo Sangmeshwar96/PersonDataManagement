@@ -11,6 +11,7 @@ namespace PersonDataManagement
             DataManagement.AddPersonDetails(Personlist);
             DataManagement.RetrieveTopTwoRecords(Personlist);
             DataManagement.RetrieveAllDataBetweenAge13To18(Personlist);
+            DataManagement.RetrieveAverageAge(Personlist);
         }
     }
 }
