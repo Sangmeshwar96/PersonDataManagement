@@ -43,6 +43,13 @@ namespace PersonDataManagement
                 Console.WriteLine("SSN={0}\tName={1}\tAddress={2}\tAge={3})", person.SSN, person.Name, person.Address, person.Age);
             }
         }
+        //Average age in the list
 
+        public static void RetrieveAverageAge(List<Person> Personlist)
+        {
+            double AverageAge = Personlist.Average<Person>(person => person.Age);
+            Console.WriteLine("\nAverage Age in the list is " + AverageAge);
+
+        }
     }
 }
