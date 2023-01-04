@@ -10,6 +10,7 @@ namespace PersonDataManagement
             List<Person> Personlist = new List<Person>();
             DataManagement.AddPersonDetails(Personlist);
             DataManagement.RetrieveTopTwoRecords(Personlist);
+            DataManagement.RetrieveAllDataBetweenAge13To18(Personlist);
         }
     }
 }

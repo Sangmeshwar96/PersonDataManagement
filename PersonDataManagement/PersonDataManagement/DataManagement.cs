@@ -22,6 +22,8 @@ namespace PersonDataManagement
                 Console.WriteLine("SSN={0}\tName={1}\tAddress={2}\tAge={3})", person.SSN, person.Name, person.Address, person.Age);
             }
         }
+        //Top 2 records age less than 60
+
         public static void RetrieveTopTwoRecords(List<Person> Personlist)
         {
             Console.WriteLine("\nTop 2 Data Below Age 60\n");
@@ -30,7 +32,16 @@ namespace PersonDataManagement
             {
                 Console.WriteLine("SSN={0}\tName={1}\tAddress={2}\tAge={3})", person.SSN, person.Name, person.Address, person.Age);
             }
-
+        }
+        //Persons Age Between 13 To 18
+        public static void RetrieveAllDataBetweenAge13To18(List<Person> Personlist)
+        {
+            Console.WriteLine("\nPersons Age Between 13 To 18\n");
+            var data = Personlist.Where(x => x.Age >= 13 && x.Age <= 18);
+            foreach (var person in data)
+            {
+                Console.WriteLine("SSN={0}\tName={1}\tAddress={2}\tAge={3})", person.SSN, person.Name, person.Address, person.Age);
+            }
         }
 
     }
