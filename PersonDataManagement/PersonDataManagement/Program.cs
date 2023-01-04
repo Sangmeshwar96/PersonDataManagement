@@ -9,6 +9,7 @@ namespace PersonDataManagement
             Console.WriteLine("Welcome to Person Data Management!\n");
             List<Person> Personlist = new List<Person>();
             DataManagement.AddPersonDetails(Personlist);
+            DataManagement.RetrieveTopTwoRecords(Personlist);
         }
     }
 }

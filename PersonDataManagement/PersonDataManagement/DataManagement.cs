@@ -22,6 +22,16 @@ namespace PersonDataManagement
                 Console.WriteLine("SSN={0}\tName={1}\tAddress={2}\tAge={3})", person.SSN, person.Name, person.Address, person.Age);
             }
         }
+        public static void RetrieveTopTwoRecords(List<Person> Personlist)
+        {
+            Console.WriteLine("\nTop 2 Data Below Age 60\n");
+            var data = Personlist.Where(x => x.Age < 60).Take(2);
+            foreach (var person in data)
+            {
+                Console.WriteLine("SSN={0}\tName={1}\tAddress={2}\tAge={3})", person.SSN, person.Name, person.Address, person.Age);
+            }
+
+        }
 
     }
 }
